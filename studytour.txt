@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyTour</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffcc70;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    section {
+      padding: 20px;
+      background-color: #fff9e6;
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #f57c00;
+    }
+    button {
+      background-color: #f8b500;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #f57c00;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 60%;
+      border: 2px solid #f8b500;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #ffcc70;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    #quiz-box, #summary-box {
+      margin-top: 15px;
+      background-color: #fff3cd;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ffeeba;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 StudyTour</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#notes">Notes</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#tips">Study Tips</a>
+      <a href="#summary">Topic Summary</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to StudyTour 🎓</h2>
+    <p>Your journey to smart learning begins here! Explore notes, quizzes, and study tips.</p>
+    <img src="https://cdn.pixabay.com/photo/2016/03/31/20/11/book-1299690_960_720.png" alt="Books" width="200" />
+  </section>
+
+  <section id="notes">
+    <h2>📚 Subject-wise Notes</h2>
+    <ul>
+      <li><strong>English:</strong> Literature summaries, grammar tips</li>
+      <li><strong>Hindi:</strong> पाठ के सारांश, व्याकरण</li>
+      <li><strong>Marathi:</strong> धड्यांचे सारांश, व्याकरण</li>
+      <li><strong>Geography:</strong> Maps, resources, chapters</li>
+      <li><strong>History:</strong> Freedom movements, revolutions</li>
+      <li><strong>Maths:</strong> Formulas, solved problems</li>
+      <li><strong>Science:</strong> Biology, Chemistry, Physics summaries</li>
+    </ul>
+  </section>
+
+  <section id="quiz">
+    <h2>📝 Quiz Generator</h2>
+    <button onclick="generateQuiz()">Generate Quiz</button>
+    <div id="quiz-box"></div>
+  </section>
+
+  <section id="tips">
+    <h2>💡 Study Tips</h2>
+    <ul>
+      <li>Make a timetable and stick to it</li>
+      <li>Take short breaks while studying</li>
+      <li>Revise regularly</li>
+      <li>Practice previous year questions</li>
+      <li>Stay hydrated and sleep well</li>
+    </ul>
+  </section>
+
+  <section id="summary">
+    <h2>🔍 Get Topic Summary</h2>
+    <input type="text" id="topic" placeholder="Enter topic (e.g. photosynthesis)" />
+    <button onclick="generateSummary()">Get Summary</button>
+    <div id="summary-box"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 StudyTour. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
